@@ -1,0 +1,41 @@
+version: "3.3"
+
+services:
+
+  testing:
+    depends_on:
+      - db
+    restart: always
+    build: .
+    command: "npm run test:e2e"
+    ports:
+      - 3001:3000
+    environment:
+      - DB_URL=mongodb://mongo-docker
+    volumes:
+      - ./:/app/seeker
+      - ./.env:/app/seeker/.env
+      - /app/seeker/node_modules
+
+  app:
+    depends_on:
+      - db
+    restart: always
+    build: .
+    ports:
+      - 3000:3000
+    environment:
+      - DB_URL=mongodb://mongo-docker
+    volumes:
+      - ./:/app/seeker
+      - ./.env:/app/seeker/.env
+      - /app/seeker/node_modules
+
+  db:
+    image: mongo
+    container_name: mongo-docker
+    volumes:
+      - ./database:/data/db
+    ports:
+      - 27017:27017
+    restart: always
