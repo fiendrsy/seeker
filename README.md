@@ -29,7 +29,7 @@ docker-compose up testing
 localhost:3000
 ```
 ## Usage
-**The paths**
+**The paths:**
 ```
 PRODUCT
 
