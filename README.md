@@ -13,7 +13,7 @@
 git clone https://github.com/fiendrsy/seeker-backend.git
 ```
 ```
-cd seeker
+cd seeker-backend
 ```
 ## Docker up
 **Launch the application:**
