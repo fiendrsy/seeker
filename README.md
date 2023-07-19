@@ -10,7 +10,7 @@
 ## Installation
 **Clone the project to your computer:**
 ```
-git clone https://github.com/fiendrsy/seeker.git
+git clone https://github.com/fiendrsy/seeker-backend.git
 ```
 ```
 cd seeker
