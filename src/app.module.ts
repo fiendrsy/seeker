@@ -7,12 +7,12 @@ import { ReviewModule } from "./review/review.module";
 import { RolesModule } from "./roles/roles.module";
 import { TopPageModule } from "./top-page/top-page.module";
 import { UsersModule } from "./users/users.module";
-import { getMongoDbUri } from "./config";
+import { GET_MONGO_URI } from "./config";
 
 @Module({
 	imports: [
 		ConfigModule.forRoot(),
-		MongooseModule.forRootAsync({ useFactory: getMongoDbUri }),
+		MongooseModule.forRootAsync({ useFactory: GET_MONGO_URI }),
 		UsersModule,
 		AuthModule,
 		ReviewModule,
