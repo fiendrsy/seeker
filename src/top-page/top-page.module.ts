@@ -6,16 +6,16 @@ import { TopPageController } from "./top-page.controller";
 import { TopPageService } from "./top-page.service";
 
 @Module({
-	imports: [
-		MongooseModule.forFeatureAsync([
-			{
-				name: TopPage.name,
-				useFactory: async () => TopPageSchema,
-			},
-		]),
-		JwtModule
-	],
-	controllers: [TopPageController],
-	providers: [TopPageService],
+  imports: [
+    MongooseModule.forFeatureAsync([
+      {
+        name: TopPage.name,
+        useFactory: async () => TopPageSchema,
+      },
+    ]),
+    JwtModule,
+  ],
+  controllers: [TopPageController],
+  providers: [TopPageService],
 })
 export class TopPageModule {}

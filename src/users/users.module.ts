@@ -7,18 +7,18 @@ import { UsersService } from "./users.service";
 import { AuthModule } from "../auth/auth.module";
 
 @Module({
-	imports: [
-		forwardRef(() => AuthModule),
-		MongooseModule.forFeatureAsync([
-			{
-				name: User.name,
-				useFactory: async () => UserSchema,
-			},
-		]),
-		JwtModule,
-	],
-	controllers: [UsersController],
-	providers: [UsersService],
-	exports: [UsersService, MongooseModule],
+  imports: [
+    forwardRef(() => AuthModule),
+    MongooseModule.forFeatureAsync([
+      {
+        name: User.name,
+        useFactory: async () => UserSchema,
+      },
+    ]),
+    JwtModule,
+  ],
+  controllers: [UsersController],
+  providers: [UsersService],
+  exports: [UsersService, MongooseModule],
 })
 export class UsersModule {}

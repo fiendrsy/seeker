@@ -10,15 +10,15 @@ import { UsersModule } from "./users/users.module";
 import { GET_MONGO_URI } from "./config";
 
 @Module({
-	imports: [
-		ConfigModule.forRoot(),
-		MongooseModule.forRootAsync({ useFactory: GET_MONGO_URI }),
-		UsersModule,
-		AuthModule,
-		ReviewModule,
-		TopPageModule,
-		ProductModule,
-		RolesModule,
-	],
+  imports: [
+    ConfigModule.forRoot(),
+    MongooseModule.forRootAsync({ useFactory: GET_MONGO_URI }),
+    UsersModule,
+    AuthModule,
+    ReviewModule,
+    TopPageModule,
+    ProductModule,
+    RolesModule,
+  ],
 })
 export class AppModule {}

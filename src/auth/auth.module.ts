@@ -7,9 +7,9 @@ import { AuthTokensService } from "./auth.tokens.service";
 import { AuthValidationService } from "./auth.validation.service";
 
 @Module({
-	imports: [UsersModule, JwtModule],
-	controllers: [AuthController],
-	providers: [AuthService, AuthTokensService, AuthValidationService],
-	exports: [AuthService],
+  imports: [UsersModule, JwtModule],
+  controllers: [AuthController],
+  providers: [AuthService, AuthTokensService, AuthValidationService],
+  exports: [AuthService],
 })
 export class AuthModule {}

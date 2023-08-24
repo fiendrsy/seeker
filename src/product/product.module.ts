@@ -7,18 +7,18 @@ import { ProductController } from "./product.controller";
 import { ProductService } from "./product.service";
 
 @Module({
-	imports: [
-		MongooseModule.forFeatureAsync([
-			{
-				name: Product.name,
-				useFactory: async () => ProductSchema,
-			},
-		]),
-		JwtModule,
-		ReviewModule,
-	],
-	controllers: [ProductController],
-	providers: [ProductService],
-	exports: [MongooseModule],
+  imports: [
+    MongooseModule.forFeatureAsync([
+      {
+        name: Product.name,
+        useFactory: async () => ProductSchema,
+      },
+    ]),
+    JwtModule,
+    ReviewModule,
+  ],
+  controllers: [ProductController],
+  providers: [ProductService],
+  exports: [MongooseModule],
 })
 export class ProductModule {}

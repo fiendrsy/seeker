@@ -5,8 +5,8 @@ import { RolesController } from "./roles.controller";
 import { RolesService } from "./roles.service";
 
 @Module({
-	imports: [UsersModule, JwtModule],
-	controllers: [RolesController],
-	providers: [RolesService],
+  imports: [UsersModule, JwtModule],
+  controllers: [RolesController],
+  providers: [RolesService],
 })
 export class RolesModule {}
