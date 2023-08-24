@@ -1,3 +1,3 @@
 export const mockDataGuards = {
-	canActive: () => true,
+  canActive: () => true,
 };
