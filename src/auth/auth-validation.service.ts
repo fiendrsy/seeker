@@ -39,7 +39,7 @@ export class AuthValidationService {
     }
     await this.validatePassword(password, user.passwordHash);
     await this.validateEmail(email);
-    const userProfile = this.usersService.profile(login);
+    const userProfile = await this.usersService.profile(login);
     return userProfile;
   }
 

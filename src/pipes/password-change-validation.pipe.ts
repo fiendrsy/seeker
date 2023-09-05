@@ -12,7 +12,6 @@ import { PASSWORDS_DO_NOT_MATCH } from "./constants";
 export class PasswordChangeValidationPipe implements PipeTransform {
   transform(value: ChangePasswordDto, metadata: ArgumentMetadata) {
     if (metadata.type !== "body") return value;
-
     if (value.newPassword !== value.verifiedNewPassword) {
       throw new HttpException(PASSWORDS_DO_NOT_MATCH, HttpStatus.BAD_REQUEST);
     }

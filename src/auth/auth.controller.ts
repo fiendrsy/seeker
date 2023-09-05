@@ -35,14 +35,14 @@ export class AuthController {
   @UseGuards(JwtAccessTokenGuard)
   @Post("logout")
   @HttpCode(200)
-  async logout(@User("_id") userId: string) {
+  async logout(@User("sub") userId: string) {
     return await this.authService.logout(userId);
   }
 
   @UseGuards(JwtRefreshTokenGuard)
   @Post("refresh")
   @HttpCode(200)
-  async refreshToken(@User("_id") userId: string, @User("refreshToken") token: string) {
+  async refreshToken(@User("sub") userId: string, @User("refreshToken") token: string) {
     return await this.authService.refreshToken(userId, token);
   }
 

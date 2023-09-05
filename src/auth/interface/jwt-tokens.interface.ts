@@ -5,6 +5,6 @@ export interface Tokens {
 
 export interface JwtPayload {
   login: string;
-  _id: string;
+  sub: string;
   roles: string[];
 }
